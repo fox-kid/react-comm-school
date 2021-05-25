@@ -1,7 +1,7 @@
 import React from "react";
 
-function Bottom(props) {
+function Block(props) {
   return <span className={props.className}>{props.title}</span>;
 }
 
-export default Bottom;
+export default Block;
