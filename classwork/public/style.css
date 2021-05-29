@@ -1,0 +1,67 @@
+:root {
+  --main-color: #6f9283;
+  --secondary-color: #f0dcca;
+  --bg-color: #696d7d;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  background-color: #29b473;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  margin: 25%;
+  flex-direction: column;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.wrapper button,
+.history button {
+  margin: 15px 0;
+  width: fit-content;
+  align-self: center;
+  padding: 6px 14px;
+  border-radius: 5px;
+  border: 0;
+  color: #140016;
+  background-color: #dbf15c;
+  cursor: pointer;
+}
+
+.joke-line {
+  text-align: center;
+}
+
+.history {
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.historyBox {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  border: 1px solid black;
+  overflow: auto;
+  width: 700px;
+  height: 300px;
+}
+
+.historyBox span {
+  margin: 10px;
+}
