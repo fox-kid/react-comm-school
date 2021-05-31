@@ -13,7 +13,7 @@ function RandomJoke() {
       .then((data) => setJoke(data.value));
   }
 
-  joke !== "" ? jokes.push({ joke }) : null;
+  joke !== "" ? jokes.push(joke) : null;
   console.log(jokes);
   return (
     <section className="wrapper">
