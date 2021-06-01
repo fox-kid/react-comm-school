@@ -48,3 +48,17 @@ body {
   inline-size: fit-content;
   margin-bottom: 0.4rem;
 }
+
+.loading-text,
+.error-text {
+  font-size: 1.2rem;
+  margin: 2rem;
+}
+
+.loading-text {
+  color: #0f484d;
+}
+
+.error-text {
+  color: #941010;
+}

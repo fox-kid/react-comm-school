@@ -2,8 +2,7 @@ import React, { useState, useEffect } from "react";
 
 import { fetchUser } from "../api";
 import User from "./User";
-import ErrorBox from "./ErrorBox";
-import ErrorMessage from "./ErrorMessage";
+// import ErrorMessage from "./ErrorMessage"
 
 function UserOutput(props) {
   const [user, setUser] = useState([]);
@@ -12,19 +11,26 @@ function UserOutput(props) {
 
   useEffect(() => {
     fetchUser(props)
-      .then((data) => setUser(data))
-      .catch((err) => setError(true))
+      .then((data) => {
+        setUser(data);
+        setLoading(false);
+        setError(false);
+      })
+      .catch((err) => {
+        setError(err.message);
+      })
       .finally(() => setLoading(false));
   }, []);
 
   return (
     <div className="userBox">
-      {error && (
-        <ErrorBox>
-          <ErrorMessage text="Something went wrong" />
-        </ErrorBox>
+      {loading ? (
+        <p className="loading-text">Loading...</p>
+      ) : error ? (
+        <p className="error-text">{error}</p>
+      ) : (
+        <User user={user.results[0]} />
       )}
-      {loading ? <h1>Loading...</h1> : <User user={user.results[0]} />}
     </div>
   );
 }

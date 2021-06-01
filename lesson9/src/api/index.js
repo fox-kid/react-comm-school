@@ -9,7 +9,7 @@ async function fetchUser(page) {
 
     throw new Error("");
   } catch (error) {
-    throw new Error("Not found");
+    throw new Error("Something went wrong");
   }
 }
 
