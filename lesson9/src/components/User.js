@@ -1,7 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
+
+import UserSeeMore from "./UserSeeMore";
 
 function User(props) {
-  return (
+  const [seeMore, setSeeMore] = useState(false);
+
+  function handleSeeMore() {
+    setSeeMore(true);
+  }
+
+  return !seeMore ? (
     <div className="userInfo" key={props.user.id}>
       <img src={props.user.picture.medium}></img>
       <span>{props.user.email}</span>
@@ -11,8 +19,12 @@ function User(props) {
       <span>{props.user.location.city}</span>
       <span>{props.user.dob.age}</span>
       <span>{props.user.dob.date}</span>
-      <button className="button">See more</button>
+      <button className="button" onClick={handleSeeMore}>
+        See more
+      </button>
     </div>
+  ) : (
+    <UserSeeMore props={props} />
   );
 }
 

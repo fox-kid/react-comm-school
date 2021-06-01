@@ -17,6 +17,7 @@ body {
 .info-wrapper {
   border: 2px solid #093b3f;
   border-radius: 10px;
+  max-height: 100%;
   height: 700px;
   width: 940px;
   display: flex;
@@ -61,4 +62,25 @@ body {
 
 .error-text {
   color: #941010;
+}
+
+.fullInfo {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem;
+}
+
+.fullInfoBody {
+  display: flex;
+}
+
+.fullInfoText {
+  display: flex;
+  flex-direction: column;
+  line-height: 4rem;
+}
+
+.fullInfoImage{
+  display: flex;
+  flex-direction: column;
 }
