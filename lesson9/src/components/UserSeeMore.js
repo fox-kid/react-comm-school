@@ -1,6 +1,6 @@
 import React from "react";
 
-function UserSeeMore({ props, seeMore }) {
+function UserSeeMore({ props, setSeeMore }) {
   return (
     <section className="fullInfo">
       <div className="fullInfoBody">
@@ -23,7 +23,9 @@ function UserSeeMore({ props, seeMore }) {
           <span>{props.user.login.username}</span>
         </div>
       </div>
-      <button className="button">Back</button>
+      <button className="button" onClick={() => setSeeMore((prev) => !prev)}>
+        Back
+      </button>
     </section>
   );
 }

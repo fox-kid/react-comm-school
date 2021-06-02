@@ -5,9 +5,9 @@ import UserSeeMore from "./UserSeeMore";
 function User(props) {
   const [seeMore, setSeeMore] = useState(false);
 
-  function handleSeeMore() {
-    setSeeMore(true);
-  }
+  // function handleSeeMore() {
+  //   setSeeMore(true);
+  // }
 
   return !seeMore ? (
     <div className="userInfo" key={props.user.id}>
@@ -19,12 +19,12 @@ function User(props) {
       <span>{props.user.location.city}</span>
       <span>{props.user.dob.age}</span>
       <span>{props.user.dob.date}</span>
-      <button className="button" onClick={handleSeeMore}>
+      <button className="button" onClick={() => setSeeMore((prev) => !prev)}>
         See more
       </button>
     </div>
   ) : (
-    <UserSeeMore props={props} />
+    <UserSeeMore props={props} setSeeMore={setSeeMore} />
   );
 }
 
