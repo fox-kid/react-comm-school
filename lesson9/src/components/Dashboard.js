@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 
 import UserOutput from "./UserOutput";
 
@@ -23,6 +23,6 @@ function Dashboard() {
       </button>
     </section>
   );
-}
+} 
 
 export default Dashboard;

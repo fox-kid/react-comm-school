@@ -29,7 +29,7 @@ function UserOutput(props) {
       ) : error ? (
         <p className="error-text">{error}</p>
       ) : (
-        <User user={user.results[0]} />
+        <User user={user.results} />
       )}
     </div>
   );
