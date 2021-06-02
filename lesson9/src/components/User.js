@@ -5,10 +5,6 @@ import UserSeeMore from "./UserSeeMore";
 function User(props) {
   const [seeMore, setSeeMore] = useState(false);
 
-  // function handleSeeMore() {
-  //   setSeeMore(true);
-  // }
-
   return !seeMore ? (
     <div className="userInfo" key={props.user.id}>
       <img src={props.user.picture.medium}></img>
