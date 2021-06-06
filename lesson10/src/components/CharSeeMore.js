@@ -15,7 +15,7 @@ function CharSeeMore({ properties, setSeeMore }) {
         <span>Edited: {properties.edited}</span>
         <span>Name: {properties.name}</span>
       </div>
-      <button onClick={setSeeMore((prev) => !prev)}>Go back</button>
+      <button>Go back</button>
     </div>
   );
 }
