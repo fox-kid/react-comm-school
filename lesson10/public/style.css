@@ -15,6 +15,25 @@
 }
 
 .charSeeMore {
+  margin: 3rem;
+}
+
+.charDetails {
   display: flex;
   flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+button.goBack {
+  padding: 6px 10px;
+  background-color: #350707;
+  color: #ffffff;
+  border: 1px solid #470b0b;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: 0.2s all;
+}
+
+button.goBack:hover {
+  background-color: #660d0d;
 }

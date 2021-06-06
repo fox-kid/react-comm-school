@@ -2,8 +2,8 @@ import React from "react";
 
 function CharSeeMore({ properties, setSeeMore }) {
   return (
-    <div>
-      <div className="charSeeMore">
+    <div className="charSeeMore">
+      <div className="charDetails">
         <span>Height: {properties.height}</span>
         <span>Mass: {properties.mass}</span>
         <span>Hair color: {properties.hair_color}</span>
@@ -15,7 +15,7 @@ function CharSeeMore({ properties, setSeeMore }) {
         <span>Edited: {properties.edited}</span>
         <span>Name: {properties.name}</span>
       </div>
-      <button>Go back</button>
+      <button className="goBack">Go back</button>
     </div>
   );
 }
