@@ -43,7 +43,7 @@ function Characters() {
           ))}
         </div>
       ) : (
-        <CharSeeMore properties={data} />
+        <CharSeeMore properties={data} setSeeMore={setSeeMore} />
       )}
     </div>
   );
