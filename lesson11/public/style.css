@@ -1,0 +1,77 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.card-grid {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 1rem;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  margin-bottom: 1rem;
+  width: 250px;
+  border: 1px solid #e2b3b3;
+  border-radius: 0.3rem;
+  padding: 10px;
+}
+
+.card-title {
+  margin-bottom: 0.4rem;
+}
+
+button.read {
+  padding: 4px 16px;
+  inline-size: fit-content;
+  cursor: pointer;
+}
+
+.card img {
+  inline-size: fit-content;
+  margin-bottom: 1rem;
+  border: 1px solid #f5e9e9;
+  height: 300px;
+  border-radius: 0.2rem;
+}
+
+.see-more {
+  margin: 1rem;
+}
+
+.see-more h1 {
+  display: block;
+  margin-bottom: 2rem;
+}
+
+.post-content {
+  display: flex;
+  margin-bottom: 2rem;
+}
+
+.post-content img {
+  inline-size: fit-content;
+  border: 1px solid #f5e9e9;
+  border-radius: 0.2rem;
+}
+
+.post-text {
+  margin-left: 1rem;
+  padding: 1rem;
+  font-size: 2rem;
+  border: 1px solid #e2b3b3;
+  border-radius: 0.3rem;
+}
+
+.comment-section {
+  padding: 1rem;
+  border: 1px solid #e2b3b3;
+  border-radius: 0.3rem;
+}

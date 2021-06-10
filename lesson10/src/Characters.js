@@ -1,18 +1,19 @@
 import React, { useState, useEffect } from "react";
 
-import { fetchNames } from "./components/api/index.js";
+import { fetchUser } from "./components/api/index.js";
 import CharName from "./components/CharName";
-import CharSeeMore from "./components/CharSeeMore"
+import CharSeeMore from "./components/CharSeeMore";
 
 function Characters() {
   const [char, setChar] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
   const [seeMore, setSeeMore] = useState(false);
-  const [data, setData] = useState("");
+  // const [data, setData] = useState("");
+  const [page, setPage] = useState("");
 
   useEffect(() => {
-    fetchNames()
+    fetchUser({page})
       .then((data) => {
         setChar(data);
         setLoading(false);
@@ -38,12 +39,12 @@ function Characters() {
               charName={item.name}
               setSeeMore={setSeeMore}
               itemId={item.uid}
-              setData={setData}
+              setPage={setPage}
             />
           ))}
         </div>
       ) : (
-        <CharSeeMore properties={data} setSeeMore={setSeeMore} />
+        <CharSeeMore properties={char} setSeeMore={setSeeMore} />
       )}
     </div>
   );
