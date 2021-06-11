@@ -5,11 +5,11 @@
 }
 
 .card-grid {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  gap: 10px;
+  grid-auto-flow: dense;
+  grid-template-columns: repeat(4, 1fr);
   margin: 1rem;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
 }
 
 .card {
@@ -17,15 +17,20 @@
   flex-direction: column;
   text-align: center;
   align-items: center;
-  margin-bottom: 1rem;
-  width: 250px;
   border: 1px solid #e2b3b3;
   border-radius: 0.3rem;
   padding: 10px;
+  max-width: 100%;
+  overflow: hidden;
 }
 
 .card-title {
-  margin-bottom: 0.4rem;
+  margin-bottom: 0.875rem;
+  padding: 0 10px;
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 button.read {
@@ -38,7 +43,8 @@ button.read {
   inline-size: fit-content;
   margin-bottom: 1rem;
   border: 1px solid #f5e9e9;
-  height: 300px;
+  width: 100%;
+  height: auto;
   border-radius: 0.2rem;
 }
 
