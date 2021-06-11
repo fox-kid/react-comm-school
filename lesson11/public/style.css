@@ -33,10 +33,22 @@
   text-overflow: ellipsis;
 }
 
-button.read {
+button.read,
+button.add-comment {
   padding: 4px 16px;
   inline-size: fit-content;
   cursor: pointer;
+  border-radius: 0.3rem;
+  outline: none;
+  border: 1px solid #e2b3b3;
+  background-color: #e4b9b9;
+  color: #4b1b1b;
+  transition: 0.25s all;
+}
+
+button.read:hover,
+button.add-comment:hover {
+  background-color: #e29898;
 }
 
 .card img {
@@ -74,6 +86,7 @@ button.read {
   font-size: 2rem;
   border: 1px solid #e2b3b3;
   border-radius: 0.3rem;
+  text-indent: 2rem;
 }
 
 .comment-section {
@@ -81,3 +94,8 @@ button.read {
   border: 1px solid #e2b3b3;
   border-radius: 0.3rem;
 }
+/* 
+.comment-header {
+  display: flex;
+  justify-content: space-between;
+} */
