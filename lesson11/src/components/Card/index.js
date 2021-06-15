@@ -7,7 +7,7 @@ function Card({ title, id, img }) {
       <h4 className="card-title">{title}</h4>
       <img src={img} alt={title}></img>
       <Link to={`/post/${id}`}>
-        <button className="read">Read</button>
+        <button className="button--primary">Read</button>
       </Link>
     </div>
   );

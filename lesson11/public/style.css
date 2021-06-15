@@ -33,8 +33,7 @@
   text-overflow: ellipsis;
 }
 
-button.read,
-button.add-comment {
+button.button--primary {
   padding: 4px 16px;
   inline-size: fit-content;
   cursor: pointer;
@@ -46,8 +45,7 @@ button.add-comment {
   transition: 0.25s all;
 }
 
-button.read:hover,
-button.add-comment:hover {
+button.button--:hover {
   background-color: #e29898;
 }
 
@@ -94,8 +92,92 @@ button.add-comment:hover {
   border: 1px solid #e2b3b3;
   border-radius: 0.3rem;
 }
-/* 
-.comment-header {
+
+.comment-section h4 {
+  margin-bottom: 0.6rem;
+}
+
+.modal {
+  background-color: rgba(53, 36, 36, 0.2);
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 10;
   display: flex;
-  justify-content: space-between;
-} */
+  justify-content: center;
+  align-items: center;
+}
+
+.modal:empty {
+  display: none;
+}
+
+.modal > div {
+  padding: 2rem;
+  background-color: #be9595;
+  border: 1px solid #e4b9b9;
+  border-radius: 0.3rem;
+}
+
+.input-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-wrapper label {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0.5rem;
+  color: #4b1b1b;
+}
+
+.input-wrapper input {
+  width: 190px;
+  height: 35px;
+  margin-top: 0.2rem;
+  border-radius: 0.3rem;
+  border: 1px solid #e4b9b9;
+  outline: none;
+  padding: 5px;
+}
+
+.form-buttons {
+  display: flex;
+}
+
+.comment-box {
+  padding: 0.6rem;
+  border: 1px dotted #e4b9b9;
+  display: flex;
+  flex-direction: column;
+  border-radius: 0.3rem;
+  margin-bottom: 0.6rem;
+}
+
+.comment-content button {
+  margin-bottom: 0.6rem;
+}
+
+.comment--name {
+  font-size: 1rem;
+  color: #4b1b1b;
+  margin-bottom: 0.2rem;
+}
+
+.comment--name--user {
+  font-size: 1.4rem;
+}
+
+.comment--email {
+  font-size: 0.8rem;
+  color: #7a27277a;
+  margin-bottom: 0.5rem;
+}
+
+.comment--comment {
+  font-size: 1rem;
+  color: #4b1b1b;
+  text-indent: 1rem;
+}
