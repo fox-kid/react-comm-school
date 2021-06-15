@@ -181,3 +181,7 @@ button.button--:hover {
   color: #4b1b1b;
   text-indent: 1rem;
 }
+
+.form-buttons > button {
+  margin-right: 1rem;
+}
