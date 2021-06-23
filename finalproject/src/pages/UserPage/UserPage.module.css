@@ -28,6 +28,25 @@
   font-weight: bold;
 }
 
+.fav_btn {
+  display: flex;
+  height: 2rem;
+  border-radius: 50%;
+  width: 2rem;
+  padding: 0.5rem;
+  align-self: center;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  background-color: #eef10e;
+  border: 1px solid purple;
+  transition: 0.2s all;
+}
+
+.fav_btn:hover {
+  background-color: #f1b40e;
+}
+
 .user_bio {
   margin-bottom: 1rem;
 }

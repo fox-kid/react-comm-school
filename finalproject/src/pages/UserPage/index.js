@@ -3,9 +3,11 @@ import { useParams } from "react-router";
 import { Link } from "react-router-dom";
 import { getOrgs, getRepos, getUserInfo } from "../../api/users";
 import Navigation from "../../components/Navigation";
+import { useAppContext } from "../../context/DashboardContext";
 import styles from "./UserPage.module.css";
 
 function UserPage() {
+  const { favorites, setFavorites } = useAppContext();
   const username = useParams();
 
   const [userData, setUserData] = useState([]);
@@ -43,6 +45,19 @@ function UserPage() {
     maxRepos = repos.slice(0, size);
   }
 
+  const indexItem = favorites.indexOf(username);
+
+  function toggleFavorites(e) {
+    e.preventDefault();
+
+    const newFavorites = favorites.filter((item) => item !== username);
+
+    indexItem === -1
+      ? setFavorites([...favorites, username])
+      : setFavorites(newFavorites);
+  }
+  console.log(favorites);
+
   return (
     <main>
       <Navigation />
@@ -56,6 +71,9 @@ function UserPage() {
                 src={userData.avatar_url}
                 alt={`${userData.login}_photo`}
               ></img>
+              <button className={styles.fav_btn} onClick={toggleFavorites}>
+                +
+              </button>
               <span className={styles.user_name}>{userData.login}</span>
               <span className={styles.user_bio}>
                 {userData.bio !== null ? userData.bio : null}

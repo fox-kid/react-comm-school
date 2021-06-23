@@ -8,6 +8,7 @@ function AppContextProvider({ children }) {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
   const [users, setUsers] = useState([]);
+  const [favorites, setFavorites] = useState([]);
 
   useEffect(() => {
     setLoading(true);
@@ -18,7 +19,9 @@ function AppContextProvider({ children }) {
   }, []);
 
   return (
-    <AppContext.Provider value={{ users, error, loading }}>
+    <AppContext.Provider
+      value={{ users, error, loading, favorites, setFavorites }}
+    >
       {children}
     </AppContext.Provider>
   );
