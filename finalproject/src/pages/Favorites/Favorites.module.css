@@ -1,5 +1,7 @@
 .fav_users {
   margin: 3rem;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .fav_users_item {
