@@ -50,7 +50,7 @@ function UserPage() {
   function toggleFavorites(e) {
     e.preventDefault();
 
-    const newFavorites = favorites.filter((item) => item !== username);
+    const newFavorites = favorites.filter((item) => item != username);
 
     indexItem === -1
       ? setFavorites([...favorites, username])
