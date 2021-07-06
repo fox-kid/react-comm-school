@@ -1,6 +1,9 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router";
+import { Link } from "react-router-dom";
 import { getNames } from "../../api";
+
+import styles from "./Post.module.css";
 
 function Post() {
   const { id } = useParams();
@@ -54,6 +57,9 @@ function Post() {
           </span>
         </div>
       )}
+      <Link to="/" exact>
+        <button className={styles.btn}>Back</button>
+      </Link>
     </div>
   );
 }
